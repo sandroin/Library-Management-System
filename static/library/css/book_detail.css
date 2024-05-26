@@ -1,0 +1,77 @@
+.book-detail {
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.book-detail:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.book-detail h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.book-detail p {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+.book-detail a,
+.book-detail button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 150px;
+    text-align: center;
+    font-size: 1rem;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.book-detail a {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.book-detail a:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.book-detail button {
+    background-color: #ffffff;
+    color: #007bff;
+    border: 2px solid #007bff;
+}
+
+.book-detail button:hover {
+    background-color: #e6f7ff;
+    transform: scale(1.05);
+}
+
+.back-to-list {
+    background: none;
+    border: none;
+    color: #007bff;
+    padding: 5px;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 0.875rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.back-to-list:hover {
+    color: #0056b3;
+}

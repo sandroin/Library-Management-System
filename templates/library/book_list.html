@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_head %}
+    <link rel="stylesheet" href="{% static 'library/css/book_list.css' %}">
+{% endblock %}
+
+{% block content %}
+<h2>Books</h2>
+<div class="forms-container">
+    <form id="filter-form" class="filter-form">
+        <select id="author-filter" name="author">
+            <option value="">All Authors</option>
+        </select>
+        <select id="genre-filter" name="genres">
+            <option value="">All Genres</option>
+        </select>
+        <button type="submit">Filter</button>
+    </form>
+
+    <form id="search-form" class="search-form">
+        <input type="text" id="search-query" name="search" placeholder="Search by title or author">
+        <button type="submit">Search</button>
+    </form>
+    
+    <form id="order-form" class="order-form">
+        <select id="ordering" name="ordering">
+            <option value="">Sort By</option>
+            <option value="title">Title</option>
+            <option value="-title">Title Desc</option>
+            <option value="author__name">Author Name</option>
+            <option value="-author__name">Author Name Desc</option>
+            <option value="publication_date">Publication Date</option>
+            <option value="-publication_date">Publication Date Desc</option>
+        </select>
+        <button type="submit">Sort</button>
+    </form>
+</div>
+
+<ul id="book-list" class="book-list"></ul>
+
+<div class="pagination" id="pagination-container"></div>
+
+{% endblock %}
+
+
+{% block extra_js %}
+    <script src="{% static 'library/js/book_list.js' %}"></script>
+{% endblock %}

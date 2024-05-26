@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_head %}
+    <link rel="stylesheet" href="{% static 'library/css/book_detail.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="book-detail">
+    <h2 id="book-title"></h2>
+    <p>Author: <span id="book-author"></span></p>
+    <p>Genres: <span id="book-genres"></span></p>
+    <p>Publication Date: <span id="book-publication-date"></span></p>
+    <p>Status: <span id="book-availability"></span></p>
+    
+    <a id="backToList" href="{% url 'book_list' %}">Back to list</a>
+    {% if user.is_authenticated %}
+        <button id="reserveButton"><span id="reserve-or-wish"></span></button>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block extra_js %}
+    <script src="{% static 'library/js/book_detail.js' %}"></script>
+{% endblock %}
